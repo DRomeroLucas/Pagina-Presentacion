@@ -1,0 +1,266 @@
+:root {
+    /* Tipografia */
+    --letraPrimario: #ffffff;
+    --letraSecundario: #0ff0fc;
+    --fuenteTextos: "Lato", sans-serif; 
+    --negro: #000000;
+    --azul-linkedin: #0E76A8;
+    --gris-github: #171515;
+    
+    /* Colores web */
+    --navegacion: #000e1ac2;
+    --colorNavegacion: #020207;
+    --colorDestacado: #23f8c3dc;
+    --pie: #0f5f6460;
+    --tarjetas: #90adff25;
+}
+
+/* Gobales 
+ Box sizing */
+html {
+    box-sizing: border-box;
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    min-height: 100vh;
+    background-color: var(--navegacion);
+    font-family: var(--fuenteTextos);
+}
+
+/* Ajuste textos */
+title {
+    text-transform: uppercase;
+}
+
+.resalte-parrafos {
+    font-family: var(--fuenteTextos);
+    color: var(--colorDestacado);
+    font-weight: 700;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
+.encabezado {
+    background-color: var(--pie);
+    padding: 0.1rem;
+}
+
+.navegacion {
+    margin: 2rem 0.5rem;
+}
+
+.enlance_navegacion {
+    border: var(--azul-linkedin) 2px solid;
+    font-family: var(--fuenteTextos);
+    font-weight: 700;
+    color: var(--letraSecundario);
+    text-decoration: none;
+    padding: 1rem 1rem;
+    margin: 0rem 1.3rem;
+    cursor: pointer;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+
+.enlance_navegacion:hover{
+    color: var(--letraPrimario);
+}
+
+.enlance_navegacion::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: var(--colorNavegacion);
+    z-index: -1;
+    transition: 0.8s;
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+
+.enlance_navegacion:hover::before{
+    height: 100%;
+}
+
+.division {
+    border-top: 2px dashed #5389FC;
+}
+
+/* Carrusel */
+.contenedor__tarjeta {
+    display: flex;
+    height: auto;
+    width: 100%;
+    margin: 20px 0;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Firefox */
+}
+
+.tarjeta {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--tarjetas);
+    font-size: 0.70rem;
+    flex: 0 0 calc(100% + 2.2rem);
+    scroll-snap-align: center;
+}
+
+.contenedor__tarjeta::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+/* Botones carrussel */
+.botones__carrusel {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.control {
+    background-color: var(--colorNavegacion);
+    color: var(--letraPrimario);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+}
+
+.control:hover {
+    background-color: var(--colorDestacado);
+}
+
+/* Primera tarjeta */
+.contenedor__tarjeta__presentacion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: inherit;
+}
+
+.contenedor__tarjeta__presentacion__texto {
+    text-align: justify;
+    width: 60%;
+    padding: 2px 50px 0 0;
+}
+
+.contenedor__tarjeta__titulo {
+    font-size: 1.2rem;
+}
+
+.contenedor__tarjeta__parrafos {
+    font-size: 0.9rem;
+}
+
+.contenedor__tarjeta__subtitulo {
+    font-size: 1.2rem;
+}
+
+.contenedor__tarjeta__presentacion__logo {
+    width: 30%;
+    height: 95%;
+}
+
+.contenedor__tarjeta__presentacion__botones {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* Botones contacto */
+.boton__link {
+    padding: 0.8rem;
+    margin: 0 8px;
+    width: 12rem;
+    text-align: center;
+    background-color: var(--colorDestacado);
+    color: var(--negro);
+    border-radius: 15px;
+    transition: background-color 1.3s ease, color 1.3s ease; 
+}
+
+.boton__linkedIn:hover {
+    background-color: var(--azul-linkedin);
+    color: var(--letraPrimario);
+}
+
+.boton__github:hover {
+    background-color: var(--gris-github);
+    color: var(--letraPrimario);
+}
+
+/* Segunda y Tercera tyarjeta en común */
+.contenido__contenedores {
+    padding: 20px 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: justify;
+}
+
+/* Segunda tarjeta */
+.contenedor__tarjeta__sobremi_logos {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 30px;
+    place-items: center;
+}
+
+.logo_saber {
+    width: 20%;
+    height: auto;
+}
+
+/* Tercera tarjeta */
+.contenedor__tarjeta__portafolio__proyectos {
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2%;
+    height: 0;
+    text-align: center;
+}
+
+.captura__pantalla {
+    width: auto;
+    height: 35%;
+}
+
+.contenedor__botones {
+    margin: 24px 0;
+}
+/* Footer */
+
+footer {
+    background-color: var(--pie);
+}
+
+.pie_de_pagina{
+    margin: 0 2rem;
+    padding: 2rem;
+    color: var(--letraPrimario);
+}
