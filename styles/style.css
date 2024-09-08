@@ -129,12 +129,13 @@ footer {
 /* Carrusel */
 .contenedor__tarjeta {
     display: flex;
-    height: auto;
+    height: 550px;
     width: 100%;
     margin: 20px 0;
     overflow-x: scroll;
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
 }
 
 .tarjeta {
@@ -144,6 +145,8 @@ footer {
     background-color: var(--tarjetas);
     flex: 0 0 calc(100% + 2.2rem);
     scroll-snap-align: center;
+    height: 550px;
+    overflow-y: hidden;
 }
 
 .contenedor__tarjeta::-webkit-scrollbar {
