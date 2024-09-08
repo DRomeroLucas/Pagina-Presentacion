@@ -6,6 +6,7 @@
     --negro: #000000;
     --azul-linkedin: #0E76A8;
     --gris-github: #171515;
+    --verde-netlify: #0dbfbc;
     
     /* Colores web */
     --navegacion: #000e1ac2;
@@ -15,7 +16,7 @@
     --tarjetas: #90adff25;
 }
 
-/* Gobales 
+/* Globales 
  Box sizing */
 html {
     box-sizing: border-box;
@@ -33,6 +34,10 @@ body {
     font-family: var(--fuenteTextos);
 }
 
+.cuerpo {
+    padding: 5px 40px;
+}
+
 /* Ajuste textos */
 title {
     text-transform: uppercase;
@@ -47,6 +52,17 @@ title {
 
 a {
     text-decoration: none;
+}
+
+/* Lista */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contexto {
+    margin: 30px 0;
 }
 
 /* HEADER */
@@ -98,6 +114,18 @@ a {
     border-top: 2px dashed #5389FC;
 }
 
+/* Footer */
+
+footer {
+    background-color: var(--pie);
+}
+
+.pie_de_pagina{
+    margin: 0 2rem;
+    padding: 2rem;
+    color: var(--letraPrimario);
+}
+
 /* Carrusel */
 .contenedor__tarjeta {
     display: flex;
@@ -114,7 +142,6 @@ a {
     align-items: center;
     justify-content: center;
     background-color: var(--tarjetas);
-    font-size: 0.70rem;
     flex: 0 0 calc(100% + 2.2rem);
     scroll-snap-align: center;
 }
@@ -159,15 +186,15 @@ a {
 }
 
 .contenedor__tarjeta__titulo {
-    font-size: 1.2rem;
+    font-size: 2rem;
 }
 
 .contenedor__tarjeta__parrafos {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
 }
 
 .contenedor__tarjeta__subtitulo {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
 }
 
 .contenedor__tarjeta__presentacion__logo {
@@ -216,7 +243,7 @@ a {
 }
 
 .texto {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 700;
     text-align: justify;
 }
@@ -253,14 +280,82 @@ a {
 .contenedor__botones {
     margin: 24px 0;
 }
-/* Footer */
 
-footer {
-    background-color: var(--pie);
+/* Sobre mi */
+.intereses {
+    margin: 20px 0;
 }
 
-.pie_de_pagina{
-    margin: 0 2rem;
-    padding: 2rem;
+.inciso {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.logo_interes {
+    width: 7%;
+    height: 7%;
+    margin: 0 20px 0 0;
+}
+
+.titulo {
+    font-size: 2rem;
+    margin: 15px 0;
+}
+
+.texto {
+    font-size: 1.5rem;
+}
+
+.texto__motivacion {
+    margin:1.5rem 0;
+}
+
+/* Página contacto */
+.boton__contacto {
+    margin: 30px 0;
+}
+
+.boton_de_contacto {
+    box-shadow: 3px 5px 45px 8px rgba(62,171,230,1); 
+}
+
+.formulario_de_google {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+/* Portafolio */
+.proyectos__portafolio {
+    margin: 15px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 30rem;
+}
+
+.proyectos__portafolio__proyecto {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 0 25px 0;
+}
+
+.proyecto_captura_de_pantalla {
+    padding: 2rem 2rem 2rem 0;
+    height: 70%;
+    width: 85%;
+}
+
+.boton__netlify:hover {
+    background-color: var(--verde-netlify);
+    color: var(--letraPrimario);
+}
+
+.captura_de_pantalla_texto {
+    text-align: justify;
+    padding:1.5rem;
     color: var(--letraPrimario);
 }
