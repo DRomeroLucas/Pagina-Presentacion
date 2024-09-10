@@ -9,7 +9,7 @@
     --verde-netlify: #0dbfbc;
     
     /* Colores web */
-    --navegacion: #000e1ac2;
+    --navegacion: #0d3f6bc2;
     --colorNavegacion: #020207;
     --colorDestacado: #23f8c3dc;
     --pie: #0f5f6460;
@@ -113,6 +113,7 @@ ul {
 .division {
     border-top: 2px dashed #5389FC;
 }
+
 
 /* Footer */
 
@@ -332,6 +333,11 @@ footer {
 }
 
 /* Portafolio */
+
+.texto__proyecto {
+    margin: 2rem 1.5rem 0 1.5rem;
+    text-align: justify;
+}
 .proyectos__portafolio {
     margin: 15px 0;
     display: grid;
